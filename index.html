@@ -68,9 +68,39 @@
             <textarea id="interests" placeholder="Your hobbies..."></textarea>
           </div>
 
+          <!-- Updated Photo Upload Section -->
           <div class="form-group full-width">
-            <label for="photoUrl">Photo URL</label>
-            <input type="url" id="photoUrl" placeholder="https://example.com/photo.jpg">
+            <label>Profile Photo</label>
+            <div class="photo-upload-section">
+              <div class="upload-options">
+                <label class="upload-option">
+                  <input type="radio" name="photoOption" value="file" checked>
+                  Upload Photo
+                </label>
+                <label class="upload-option">
+                  <input type="radio" name="photoOption" value="url">
+                  Use URL
+                </label>
+              </div>
+              
+              <div id="fileUploadSection" class="upload-section">
+                <input type="file" id="photoFile" accept="image/*">
+                <div class="upload-help">Choose an image file (JPG, PNG, GIF)</div>
+              </div>
+              
+              <div id="urlUploadSection" class="upload-section" style="display: none;">
+                <input type="url" id="photoUrl" placeholder="https://example.com/photo.jpg">
+                <div class="upload-help">Enter a direct link to an image</div>
+              </div>
+              
+              <!-- Photo Preview -->
+              <div id="photoPreview" class="photo-preview">
+                <img id="previewImage" src="" alt="Photo preview" style="display: none;">
+                <div id="previewPlaceholder" class="preview-placeholder">
+                  <span>Photo preview will appear here</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
